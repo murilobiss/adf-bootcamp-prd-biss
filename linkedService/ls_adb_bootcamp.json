@@ -1,0 +1,20 @@
+{
+	"name": "ls_adb_bootcamp",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "https://adb-8954312677911869.9.azuredatabricks.net",
+			"accessToken": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "ls_kv_bootcamp_biss",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "secret-adb-bootcamp-prd-biss"
+			},
+			"existingClusterId": "0705-102428-ly9d5did"
+		}
+	}
+}

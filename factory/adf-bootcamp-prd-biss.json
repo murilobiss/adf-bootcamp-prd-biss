@@ -1,0 +1,9 @@
+{
+	"name": "adf-bootcamp-prd-biss",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d5ca43a0-e261-43f8-a56f-953664f5ba9e",
+		"tenantId": "c78a8082-963d-4a08-81db-5d18fce556b3"
+	}
+}

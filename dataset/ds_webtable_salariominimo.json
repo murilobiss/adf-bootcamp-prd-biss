@@ -1,0 +1,54 @@
+{
+	"name": "ds_webtable_salariominimo",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_dls_bootcamp",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_container": {
+				"type": "string"
+			},
+			"p_diretorio": {
+				"type": "string"
+			},
+			"p_arquivo": {
+				"type": "string"
+			},
+			"p_delimitador": {
+				"type": "string"
+			}
+		},
+		"folder": {
+			"name": "Fontes Externas"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().p_arquivo",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().p_diretorio",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().p_container",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": {
+				"value": "@dataset().p_delimitador",
+				"type": "Expression"
+			},
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
