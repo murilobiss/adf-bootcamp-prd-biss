@@ -15,7 +15,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Repos/weslley_estudos@outlook.com/adb-bootcamp-prd-wsy/test/teste_adf",
+					"notebookPath": "/Repos/murilo.biss@hotmail.com/adb-bootcamp-prd-biss/test/teste_adf",
 					"baseParameters": {
 						"nome": {
 							"value": "@pipeline().parameters.p_nome",
