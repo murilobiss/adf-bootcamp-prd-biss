@@ -8,6 +8,10 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
+					"pipeline": {
+						"referenceName": "0 - ppl_web_scrapping",
+						"type": "PipelineReference"
+					},
 					"waitOnCompletion": true
 				}
 			},
