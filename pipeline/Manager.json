@@ -34,6 +34,10 @@
 							],
 							"userProperties": [],
 							"typeProperties": {
+								"pipeline": {
+									"referenceName": "RB-G - Processo Total - Raw e Bronze",
+									"type": "PipelineReference"
+								},
 								"waitOnCompletion": true
 							}
 						},
