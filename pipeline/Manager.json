@@ -154,7 +154,7 @@
 						"type": "AzureDatabricksDeltaLakeSource"
 					},
 					"dataset": {
-						"referenceName": "ds_deltatable_databricks1",
+						"referenceName": "ds_deltatable_databricks",
 						"type": "DatasetReference"
 					},
 					"firstRowOnly": false
