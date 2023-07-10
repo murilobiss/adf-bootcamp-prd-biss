@@ -29,6 +29,10 @@
 							"dependsOn": [],
 							"userProperties": [],
 							"typeProperties": {
+								"pipeline": {
+									"referenceName": "SV-U - Processo Generico - Silver",
+									"type": "PipelineReference"
+								},
 								"waitOnCompletion": true,
 								"parameters": {
 									"p_caminho_raiz_notebook": {

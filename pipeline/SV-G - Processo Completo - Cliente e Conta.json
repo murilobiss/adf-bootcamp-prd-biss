@@ -27,25 +27,11 @@
 							],
 							"userProperties": [],
 							"typeProperties": {
-								"waitOnCompletion": true,
-								"parameters": {
-									"p_caminho_raiz_notebook": {
-										"value": "@pipeline().parameters.p_caminho_raiz_notebook",
-										"type": "Expression"
-									},
-									"p_dominio": {
-										"value": "@concat(    \n    pipeline().parameters.p_dominio,     \n    '/perfil_financeiro'\n)",
-										"type": "Expression"
-									},
-									"p_dados_orquestrador": {
-										"value": "@activity('FLT - Filtra Perfil e Financeiro').output.value",
-										"type": "Expression"
-									},
-									"p_sv_dominio_tema_entidade": {
-										"value": "@pipeline().parameters.p_sv_dominio_tema_entidade",
-										"type": "Expression"
-									}
-								}
+								"pipeline": {
+									"referenceName": "SV-G - Processo Completo - Cliente e Conta",
+									"type": "PipelineReference"
+								},
+								"waitOnCompletion": true
 							}
 						},
 						{
