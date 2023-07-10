@@ -155,7 +155,11 @@
 					},
 					"dataset": {
 						"referenceName": "ds_deltatable_databricks",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"p_esquema": "gerencia",
+							"p_tabela": "pipeline_orquestrador"
+						}
 					},
 					"firstRowOnly": false
 				}
