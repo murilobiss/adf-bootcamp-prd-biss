@@ -141,7 +141,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"notebookPath": {
-						"value": "@concat(\n    'Repos/murilo.biss@hotmail.com/adb-bootcamp-prd-biss/delta/bronze/',\n    variables('v_diretorio_destino'), '/generico_json'\n)",
+						"value": "@concat(\n    '/Repos/murilo.biss@hotmail.com/adb-bootcamp-prd-biss/delta/bronze/',\n    variables('v_diretorio_destino'), '/generico_json'\n)",
 						"type": "Expression"
 					},
 					"baseParameters": {
