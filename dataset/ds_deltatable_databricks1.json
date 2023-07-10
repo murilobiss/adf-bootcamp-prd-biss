@@ -1,0 +1,48 @@
+{
+	"name": "ds_deltatable_databricks1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adb_delta_bootcamp",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Databricks"
+		},
+		"annotations": [],
+		"type": "AzureDatabricksDeltaLakeDataset",
+		"typeProperties": {
+			"database": "gerencia",
+			"table": "pipeline_orquestrador"
+		},
+		"schema": [
+			{
+				"name": "etapa",
+				"type": "string"
+			},
+			{
+				"name": "chave_entidade",
+				"type": "string"
+			},
+			{
+				"name": "descricao",
+				"type": "string"
+			},
+			{
+				"name": "dataset",
+				"type": "string"
+			},
+			{
+				"name": "parametro",
+				"type": "string"
+			},
+			{
+				"name": "flg_ativo",
+				"type": "boolean"
+			},
+			{
+				"name": "dt_atualizacao",
+				"type": "timestamp"
+			}
+		]
+	}
+}

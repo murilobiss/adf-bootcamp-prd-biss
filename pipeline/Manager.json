@@ -34,33 +34,7 @@
 							],
 							"userProperties": [],
 							"typeProperties": {
-								"waitOnCompletion": true,
-								"parameters": {
-									"p_data_inicio_carga": {
-										"value": "@pipeline().parameters.p_data_inicio_carga",
-										"type": "Expression"
-									},
-									"p_rb_sistema": {
-										"value": "@pipeline().parameters.p_rb_sistema",
-										"type": "Expression"
-									},
-									"p_rb_sistema_banco": {
-										"value": "@pipeline().parameters.p_rb_sistema_banco",
-										"type": "Expression"
-									},
-									"p_rb_sistema_banco_entidade": {
-										"value": "@pipeline().parameters.p_rb_sistema_banco_entidade",
-										"type": "Expression"
-									},
-									"p_rb_etapa_ingestao": {
-										"value": "@pipeline().parameters.p_rb_etapa_ingestao",
-										"type": "Expression"
-									},
-									"p_dados_orquestrador": {
-										"value": "@activity('FLT - Filtra Raw e Bronze').output.value",
-										"type": "Expression"
-									}
-								}
+								"waitOnCompletion": true
 							}
 						},
 						{
@@ -178,6 +152,10 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureDatabricksDeltaLakeSource"
+					},
+					"dataset": {
+						"referenceName": "ds_deltatable_databricks1",
+						"type": "DatasetReference"
 					},
 					"firstRowOnly": false
 				}
