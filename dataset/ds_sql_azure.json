@@ -21,11 +21,11 @@
 		"schema": [],
 		"typeProperties": {
 			"schema": {
-				"value": "@dataset().p_esquema",
+				"value": "@dataset{}.p_esquema",
 				"type": "Expression"
 			},
 			"table": {
-				"value": "@dataset().p_tabela",
+				"value": "@dataset{}.p_tabela",
 				"type": "Expression"
 			}
 		}
