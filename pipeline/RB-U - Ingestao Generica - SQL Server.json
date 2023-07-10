@@ -170,7 +170,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"notebookPath": {
-									"value": "@concat(\n    '/Repos/weslley_estudos@outlook.com/adb-bootcamp-prd-wsy/notebooks/delta/bronze/',\n    pipeline().parameters.p_diretorio_destino,\n    '/curinga_core'\n)",
+									"value": "@concat(\n    '/Repos/murilo.biss@hotmail.com/adb-bootcamp-prd-biss/delta/bronze/',\n    pipeline().parameters.p_diretorio_destino,\n    '/curinga_core'\n)",
 									"type": "Expression"
 								},
 								"baseParameters": {
