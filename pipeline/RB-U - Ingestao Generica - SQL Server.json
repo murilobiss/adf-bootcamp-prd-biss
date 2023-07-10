@@ -286,28 +286,8 @@
 										"type": "ParquetWriteSettings"
 									}
 								},
-								"enableStaging": false,
-								"translator": {
-									"type": "TabularTranslator",
-									"typeConversion": true,
-									"typeConversionSettings": {
-										"allowDataTruncation": true,
-										"treatBooleanAsNumber": false
-									}
-								}
-							},
-							"inputs": [
-								{
-									"referenceName": "ds_sql_azure",
-									"type": "DatasetReference"
-								}
-							],
-							"outputs": [
-								{
-									"referenceName": "ds_parquet_dls",
-									"type": "DatasetReference"
-								}
-							]
+								"enableStaging": false
+							}
 						},
 						{
 							"name": "SVB - T - Define Flag Etapa Bronze",
