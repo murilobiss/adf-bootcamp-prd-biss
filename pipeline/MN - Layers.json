@@ -8,6 +8,10 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
+					"pipeline": {
+						"referenceName": "RB - Ingestao Generica - Dummy JS - Web API",
+						"type": "PipelineReference"
+					},
 					"waitOnCompletion": true
 				}
 			},
@@ -24,6 +28,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"pipeline": {
+						"referenceName": "SV - User App - Web Application - Customer Success",
+						"type": "PipelineReference"
+					},
 					"waitOnCompletion": true
 				}
 			},
@@ -40,6 +48,10 @@
 				],
 				"userProperties": [],
 				"typeProperties": {
+					"pipeline": {
+						"referenceName": "GD - User Profile",
+						"type": "PipelineReference"
+					},
 					"waitOnCompletion": true
 				}
 			}
