@@ -302,6 +302,10 @@
 										"p_tabela_origem": {
 											"value": "@pipeline().parameters.p_tabela_origem",
 											"type": "Expression"
+										},
+										"p_esquema_origem": {
+											"value": "@pipeline().parameters.p_esquema_origem",
+											"type": "Expression"
 										}
 									}
 								}
