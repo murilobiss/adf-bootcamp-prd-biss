@@ -278,23 +278,58 @@
 									"partitionOption": "None"
 								},
 								"sink": {
-									"type": "AzureDatabricksDeltaLakeSink",
-									"importSettings": {
-										"type": "AzureDatabricksDeltaLakeImportCommand"
+									"type": "ParquetSink",
+									"storeSettings": {
+										"type": "AzureBlobFSWriteSettings"
+									},
+									"formatSettings": {
+										"type": "ParquetWriteSettings"
 									}
 								},
-								"enableStaging": false
+								"enableStaging": false,
+								"translator": {
+									"type": "TabularTranslator",
+									"typeConversion": true,
+									"typeConversionSettings": {
+										"allowDataTruncation": true,
+										"treatBooleanAsNumber": false
+									}
+								}
 							},
 							"inputs": [
 								{
 									"referenceName": "ds_sql_azure",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"p_esquema": {
+											"value": "@pipeline().parameters.p_esquema_origem",
+											"type": "Expression"
+										},
+										"p_tabela": {
+											"value": "@pipeline().parameters.p_tabela_origem",
+											"type": "Expression"
+										}
+									}
 								}
 							],
 							"outputs": [
 								{
-									"referenceName": "ds_deltatable_databricks",
-									"type": "DatasetReference"
+									"referenceName": "ds_parquet_dls",
+									"type": "DatasetReference",
+									"parameters": {
+										"p_container": {
+											"value": "@pipeline().parameters.p_container_destino",
+											"type": "Expression"
+										},
+										"p_diretorio": {
+											"value": "@variables('v_diretorio_completo')",
+											"type": "Expression"
+										},
+										"p_arquivo": {
+											"value": "@variables('v_arquivo_destino')",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						},

@@ -2,32 +2,43 @@
 	"name": "ds_parquet_dls",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "ls_azuresql_bootcamp",
+			"referenceName": "ls_dls_bootcamp",
 			"type": "LinkedServiceReference"
 		},
 		"parameters": {
-			"p_esquema_origem": {
+			"p_container": {
 				"type": "string"
 			},
-			"p_tabela_origem": {
+			"p_diretorio": {
+				"type": "string"
+			},
+			"p_arquivo": {
 				"type": "string"
 			}
 		},
 		"folder": {
-			"name": "Azure SQL Database"
+			"name": "Azure Storage Account"
 		},
 		"annotations": [],
-		"type": "AzureSqlTable",
-		"schema": [],
+		"type": "Parquet",
 		"typeProperties": {
-			"schema": {
-				"value": "@dataset().p_esquema_origem",
-				"type": "Expression"
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().p_arquivo",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@dataset().p_diretorio",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().p_container",
+					"type": "Expression"
+				}
 			},
-			"table": {
-				"value": "@dataset().p_tabela_origem",
-				"type": "Expression"
-			}
-		}
+			"compressionCodec": "snappy"
+		},
+		"schema": []
 	}
 }
