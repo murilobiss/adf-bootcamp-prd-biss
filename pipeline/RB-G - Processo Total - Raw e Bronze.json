@@ -43,29 +43,11 @@
 							],
 							"userProperties": [],
 							"typeProperties": {
-								"waitOnCompletion": true,
-								"parameters": {
-									"p_data_inicio_carga": {
-										"value": "@pipeline().parameters.p_data_inicio_carga",
-										"type": "Expression"
-									},
-									"p_rb_sistema_banco": {
-										"value": "@pipeline().parameters.p_rb_sistema_banco",
-										"type": "Expression"
-									},
-									"p_rb_sistema_banco_entidade": {
-										"value": "@pipeline().parameters.p_rb_sistema_banco_entidade",
-										"type": "Expression"
-									},
-									"p_dados_orquestrador": {
-										"value": "@activity('FLT - Filtra SQL Server').output.value",
-										"type": "Expression"
-									},
-									"p_rb_etapa_ingestao": {
-										"value": "@pipeline().parameters.p_rb_etapa_ingestao",
-										"type": "Expression"
-									}
-								}
+								"pipeline": {
+									"referenceName": "RB-G - Orquestra Ingestao - SqlServer",
+									"type": "PipelineReference"
+								},
+								"waitOnCompletion": true
 							}
 						}
 					]
