@@ -5,11 +5,29 @@
 			"referenceName": "ls_azuresql_bootcamp",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"p_esquema_origem": {
+				"type": "string"
+			},
+			"p_tabela_origem": {
+				"type": "string"
+			}
+		},
 		"folder": {
 			"name": "Azure SQL Database"
 		},
 		"annotations": [],
 		"type": "AzureSqlTable",
-		"schema": []
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().p_esquema_origem",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().p_tabela_origem",
+				"type": "Expression"
+			}
+		}
 	}
 }
