@@ -75,7 +75,7 @@
 		"parameters": {
 			"p_caminho_raiz_notebook": {
 				"type": "string",
-				"defaultValue": "/Repos/weslley_estudos@outlook.com/adb-bootcamp-prd-wsy/notebooks/delta/silver"
+				"defaultValue": "/Repos/murilo.biss@hotmail.com/adb-bootcamp-prd-biss/delta/silver"
 			},
 			"p_dominio": {
 				"type": "string",
