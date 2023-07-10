@@ -1,0 +1,15 @@
+{
+	"name": "ds_parquet_dls",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_azuresql_bootcamp",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Azure SQL Database"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
